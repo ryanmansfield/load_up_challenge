@@ -6,7 +6,7 @@ RSpec.describe "bookings/show", type: :view do
       first_name: "First Name",
       last_name: "Last Name",
       animal_name: "Animal Name",
-      animal_type: "Animal Type",
+      animal_type: "cat",
       hours: 2
     ))
   end
@@ -16,7 +16,7 @@ RSpec.describe "bookings/show", type: :view do
     expect(rendered).to match(/First Name/)
     expect(rendered).to match(/Last Name/)
     expect(rendered).to match(/Animal Name/)
-    expect(rendered).to match(/Animal Type/)
+    expect(rendered).to match(/cat/)
     expect(rendered).to match(/2/)
   end
 end

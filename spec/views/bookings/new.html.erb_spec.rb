@@ -6,7 +6,7 @@ RSpec.describe "bookings/new", type: :view do
       first_name: "MyString",
       last_name: "MyString",
       animal_name: "MyString",
-      animal_type: "MyString",
+      animal_type: "dog",
       hours: 1
     ))
   end

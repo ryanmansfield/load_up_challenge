@@ -6,12 +6,11 @@ RSpec.describe Booking, type: :model do
       first_name: "first_name",
       last_name: "last_name",
       animal_name: "animal_name",
-      animal_type: "animal_type",
-      hours: "hours",
+      animal_type: "dog",
+      hours: 3,
       date: "date"
     }
   }
-
   it "is valid with valid attributes" do 
     expect(Booking.new(valid_attributes)).to be_valid
   end

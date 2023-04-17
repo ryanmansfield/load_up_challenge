@@ -22,8 +22,8 @@ RSpec.describe "/bookings", type: :request do
       first_name: "first_name",
       last_name: "last_name",
       animal_name: "animal_name",
-      animal_type: "animal_type",
-      hours: "hours",
+      animal_type: "cat",
+      hours: 3,
       date: "date"
     }
   }
