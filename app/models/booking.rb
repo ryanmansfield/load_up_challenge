@@ -8,6 +8,12 @@ class Booking < ApplicationRecord
   validates :hours, numericality: { only_integer: true,
                                     greater_than_or_equal_to: 2,
                                     less_than_or_equal_to: 8 }
+
+  before_save :calculate_price
+
+  private
+
+  def calculate_price
+    self.price = BookingPriceService.new({ animal_type:, hours: }).call
+  end
 end
-
-
