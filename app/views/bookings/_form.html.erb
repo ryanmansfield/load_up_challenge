@@ -28,12 +28,12 @@
 
   <div>
     <%= form.label :animal_type, style: "display: block" %>
-    <%= form.text_field :animal_type %>
+    <%= form.select :animal_type, options_for_select([["Dog", "dog"], ["Cat", "cat"]]) %>
   </div>
 
   <div>
     <%= form.label :hours, style: "display: block" %>
-    <%= form.number_field :hours %>
+    <%= form.number_field :hours, min: 2, max: 8 %>
   </div>
 
   <div>
@@ -41,7 +41,7 @@
     <%= form.date_field :date %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-2">
+    <%= form.submit class: 'btn btn-primary'%>
   </div>
 <% end %>
